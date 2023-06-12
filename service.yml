@@ -1,0 +1,21 @@
+Name:              alertmanager-operated
+Namespace:         default
+Labels:            operated-alertmanager=true
+Annotations:       <none>
+Selector:          app.kubernetes.io/name=alertmanager
+Type:              ClusterIP
+IP Family Policy:  SingleStack
+IP Families:       IPv4
+IP:                None
+IPs:               None
+Port:              http-web  9093/TCP
+TargetPort:        http-web/TCP
+Endpoints:         172.17.0.9:9093
+Port:              tcp-mesh  9094/TCP
+TargetPort:        9094/TCP
+Endpoints:         172.17.0.9:9094
+Port:              udp-mesh  9094/UDP
+TargetPort:        9094/UDP
+Endpoints:         172.17.0.9:9094
+Session Affinity:  None
+Events:            <none>
